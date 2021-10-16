@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+:root {
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+    --very-darkblue: hsl(234, 12%, 34%);
+    --grayish-blue: hsl(229, 6%, 66%);
+    --very-lightgray: hsl(0, 0%, 98%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--very-lightgray);
+}
+
+img {
+    transform: scale(85%);
+    position: relative;
+    left: 200px;
+    top: 40px;
+}
+
+.page-title h1 {
+    color: var(--grayish-blue);
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 200;
+}
+
+.page-title h2 {
+    color: var(--very-darkblue);
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.page-title p {
+    color: var(--grayish-blue);
+    text-align: center;
+    padding-top: 10px;
+    white-space: pre-wrap;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+
+.cards {
+    background-color: var(--very-lightgray);
+    width: 85%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.panels {
+    align-items: center;
+    justify-content: center;
+}
+
+.panel {
+    background-color: var(--very-lightgray);
+    position: relative;
+    height: 230px;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    width: 320px;
+    overflow: hidden;
+    box-shadow: 1px 5px 10px 0px var(--grayish-blue);
+}
+
+.panel::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 5px;
+    width: 100%;
+}
+
+.supervisor::after {
+    background-color: var(--cyan);
+}
+
+.builder::after {
+    background-color: var(--red);
+}
+
+.karma::after {
+    background-color: var(--orange);
+}
+
+.calc::after {
+    background-color: var(--blue);
+}
+
+h3 {
+    font-weight: 600;
+    color: var(--very-darkblue);
+    padding-bottom: 5px;
+}
+
+.panel p {
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--grayish-blue);
+}
+
+@media (min-width: 768px) {
+    .panels {
+        display: flex;
+        align-items: center;
+    }
+
+    .panel {
+        margin: 18px;
+    }
+}
+
